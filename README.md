@@ -1,6 +1,7 @@
 # Toko Ungu Mobile
 
 **Dibuat Oleh : Jeremia Rangga Setyawan / 2306245775 / Kelas B**
+
 **Link Repository : https://github.com/jeremiaranggasetyawan/toko-ungu-mobile***
 
 ## Tugas 7
@@ -942,3 +943,4 @@ Saya mencoba untuk mengaplikasikan tema yang sudah saya buat khusunya dibagian w
 Dalam aplikasi yang buat ini saya menggunakan Drawer yang berada di file left_drawer.dart yang kemudian menjadi parameter di Scaffold. LeftDrawer ini berisikan nama aplikasi saya yaitu Toko Ungu, Tagline aplikasi saya yaitu "Belanja Cepat, Harga Tepat – Semua yang Kamu Butuhkan Ada di Sini!", lalu tombol navigasi menggunakan ListTile yang saat tombolnya di tap maka melakukan navigasi ke page tertentu dengan pushReplacement. Namun, berbeda saat ingin 'tambah item' saya menggunakan navigasi dengan push saja agar saya bisa kembali ke laman sebelumnya.
 
 Sekian & Terima Kasih
+
