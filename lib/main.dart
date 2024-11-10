@@ -1,4 +1,4 @@
-import 'package:toko_ungu/menu.dart';
+import 'package:toko_ungu/screens/menu.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,11 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Toko Ungu',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch().copyWith(
-          primary: const Color(0xFF6A0DAD), // Ungu kustom
-          secondary: const Color(0xFF9B30FF), // Ungu elemen sekunder
+          primary: const Color(0xFFAB47BC), // Ungu kustom
+          secondary: const Color(0xFFBA68C8), // Ungu elemen sekunder
         ),
         useMaterial3: true,
       ),

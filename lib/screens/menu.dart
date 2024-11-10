@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:toko_ungu/widgets/left_drawer.dart';
+import 'package:toko_ungu/widgets/product_card.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({super.key});
@@ -7,8 +9,8 @@ class MyHomePage extends StatelessWidget {
   final String className = 'PBP B'; // Kelas
 
   final List<ItemHomepage> items = [
-    ItemHomepage("Lihat Daftar Produk", Icons.list, Colors.lightGreen),
-    ItemHomepage("Tambah Produk", Icons.add, Colors.lightBlue),
+    ItemHomepage("Lihat Daftar Item", Icons.list, Colors.lightGreen),
+    ItemHomepage("Tambah Item", Icons.add, Colors.lightBlue),
     ItemHomepage("Logout", Icons.logout, Colors.orange),
   ];
 
@@ -18,7 +20,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       // AppBar adalah bagian atas halaman yang menampilkan judul.
       appBar: AppBar(
-        // Judul aplikasi "Mental Health Tracker" dengan teks putih dan tebal.
+        // Judul aplikasi "Toko Ungu" dengan teks putih dan tebal.
         title: const Text(
           'Toko Ungu',
           style: TextStyle(
@@ -28,6 +30,7 @@ class MyHomePage extends StatelessWidget {
         ),
         // Warna latar belakang AppBar diambil dari skema warna tema aplikasi.
         backgroundColor: Theme.of(context).colorScheme.primary,
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       // Body halaman dengan padding di sekelilingnya.
       body: Padding(
@@ -88,6 +91,7 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
+      drawer: const LeftDrawer(),
     );
   }
 }
@@ -120,57 +124,6 @@ class InfoCard extends StatelessWidget {
             const SizedBox(height: 8.0),
             Text(content),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class ItemHomepage {
-  final String name;
-  final IconData icon;
-  final Color color;
-
-  ItemHomepage(this.name, this.icon, this.color);
-}
-
-class ItemCard extends StatelessWidget {
-  final ItemHomepage item;
-
-  const ItemCard(this.item, {super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      color: item.color, // Warna tombol berdasarkan item
-      borderRadius: BorderRadius.circular(12),
-      child: InkWell(
-        onTap: () {
-          ScaffoldMessenger.of(context)
-            ..hideCurrentSnackBar()
-            ..showSnackBar(SnackBar(
-                content: Text("Kamu telah menekan tombol ${item.name}!")));
-        },
-        child: Container(
-          padding: const EdgeInsets.all(8),
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  item.icon,
-                  color: Colors.white,
-                  size: 30.0,
-                ),
-                const Padding(padding: EdgeInsets.all(3)),
-                Text(
-                  item.name,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white),
-                ),
-              ],
-            ),
-          ),
         ),
       ),
     );
