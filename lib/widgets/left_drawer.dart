@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:toko_ungu/screens/list_productentry.dart';
 import 'package:toko_ungu/screens/menu.dart';
-import 'package:toko_ungu/screens/productentry_from.dart';
+import 'package:toko_ungu/screens/productentry_form.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -51,15 +52,27 @@ class LeftDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.list),
+            leading: const Icon(Icons.add),
             title: const Text('Tambah Item'),
-            // Bagian redirection ke MoodEntryFormPage
+            // Bagian redirection ke ProductEntryFormPage
             onTap: () {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const MoodEntryFormPage(),
+                    builder: (context) => const ProductEntryFormPage(),
                   ));
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.list),
+            title: const Text('Daftar Item'),
+            onTap: () {
+              // Route menu ke halaman mood
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const ProductEntryPage()),
+              );
             },
           ),
         ],
