@@ -21,7 +21,11 @@ class _RegisterPageState extends State<RegisterPage> {
     final request = context.watch<CookieRequest>();
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Register'),
+        title: Text('Toko Ungu | Register',
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.primary,
+              fontWeight: FontWeight.bold,
+            )),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {

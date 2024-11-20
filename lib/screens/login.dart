@@ -43,7 +43,11 @@ class _LoginPageState extends State<LoginPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'),
+        title: Text('Toko Ungu | Login',
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.primary,
+              fontWeight: FontWeight.bold,
+            )),
       ),
       body: Center(
         child: SingleChildScrollView(
